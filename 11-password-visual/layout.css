@@ -1,0 +1,26 @@
+body,html{
+ margin:0;
+ padding:0;
+}
+
+div{
+  width:400px;
+  height:105px;
+  margin:200px auto;
+}
+
+input{
+  height:25px;
+  width:230px;
+  border-radius:50px;
+  border-color:orange;
+  padding-left:10px;
+  font-size:1.1em;
+}
+
+img{
+  width:26px;
+  position:relative;
+  top:7px;
+  left:-40px;
+}
