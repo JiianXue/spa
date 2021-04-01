@@ -1,0 +1,98 @@
+
+/*
+ <div class="notepad-dlg-goto">
+  <div class="notepad-dlgbox">
+    <div class="titlebar">
+      <p class="title">转到指定行</p>
+      <span class="close-btn">×</span>
+    </div>
+    <div class="main">
+      <label>行号(<u>L</u>):</label>
+      <br>
+      <input class="txt-line-num" type="">
+      <br>
+      <input type="button">
+      <input type="button">
+    </div>
+  </div>
+</div>
+*/
+
+body,html {
+  width：100%;
+  height: 100%;
+  margin: 0;
+  padding :0;
+}
+
+.notepad-dlg-goto {
+  width:100%;
+  height:100%;
+  z-index:10;
+  position:absolute;
+  left:50;
+  top:50;
+}
+
+.notepad-dlg-goto .notepad-dlgbox {
+  height: 160px;
+  width:293px;
+  box-sizing:border-box;
+  border:1px solid gray;
+  box-shadow:10px 10px 10px #d6d6d6;
+}
+
+.notepad-dlg-goto .titlebar {
+  height:30px;
+  width:293px;
+  left:0;
+  top:0;
+  position:absolute;
+}
+
+.notepad-dlg-goto .title {
+  margin: 0 10px;
+  line-height:30px;
+}
+
+.notepad-dlg-goto .close-btn{
+  position:absolute;
+  top:0;
+  right:0;
+  width:30px;
+  line-height:30px;
+  text-align:center;
+}
+
+.notepad-dlg-goto .main {
+  height:129px;
+  width:292px;
+  position:absolute;
+  top:30px;
+  left:0;
+  background-color:#f0f0f0;
+  padding:12px;
+  box-sizing: border-box;
+}
+
+.notepad-dlg-goto .txt-line-num {
+  margin: 10px 0;
+  height:29px;
+  width:265px;
+}
+
+.notepad-dlg-goto input[type="button"]{
+  height:28px;
+  width:86px;
+  position:absolute;
+  bottom:16px;
+}
+
+.notepad-dlg-goto .btn-goto {
+  right:108px;
+}
+
+.notepad-dlg-goto .btn-cancel {
+  right: 14px;
+}
+

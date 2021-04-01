@@ -1,0 +1,140 @@
+
+/*
+<div class="notepad-dlg-search">
+  <div class="dialogbox notepad-dlgbox">
+    <div class="notepad-dlg-titlebar">
+        <p class="title">查找</p>
+        <span class="close-btn">✖</span>
+    </div>
+    <div class="main notepad-dlg-main">
+        <label for="">查找内容(N):</label>
+        <input class="txt-content" type="text" autofocus><br>
+        <input type="checkbox" value="capital-sense">区分大小写(C)
+        <fieldset class="search-direction">
+          <legend>方向</legend>
+          <input type="radio" value="up">向上(U)
+          <input type="radio" value="down" checked>向下(D)
+        </fieldset>
+        <input class="btn-search btn" type="button" value="查找下一个(F)">
+        <input class="btn-cancel btn" type="button" value="取消">
+    </div>
+  </div>
+</div>
+*/
+
+body,html {
+  width：100%;
+  height: 100%;
+  margin: 0;
+  padding :0;
+}
+
+.notepad-dlg-search{
+  z-index:10;
+}
+
+.notepad-dlgbox {
+  height:185px;
+  width:500px;
+  box-sizing:border-box;
+  border:1px solid gray;
+  box-shadow:10px 10px 10px #d6d6d6;
+  margin:0 auto;
+  position:relative;
+  top:100px;
+}
+
+.notepad-dlg-search .notepad-dlg-titlebar {
+  height:30px;
+  width:500px;
+  position:absolute;
+  left:-1px;
+  top:0px;
+  background-color:#3e4048;
+  font-size:1.05em;
+}
+
+.notepad-dlg-titlebar .title {
+  position:absolute;
+  left:10px;
+  top:-17px;
+  line-height:30px;
+  color:white;
+}
+
+.notepad-dlg-titlebar .close-btn {
+  color:gray;
+  line-height:30px;
+  position:absolute;
+  right:0;
+  top:0;
+  text-align:center;
+  width:30px;
+}
+
+.notepad-dlg-titlebar .close-btn:hover {
+  color:#fff;
+  background-color:red;
+}
+
+.notepad-dlg-search .main {
+  height: 153px;
+  padding: 6px;
+}
+
+.notepad-dlg-main {
+  background-color:#f0f0f0;
+  box-sizing:border-box;
+  padding:12px;
+  position:relative;
+  top:30px;
+  left:0.5px;
+}
+
+.notepad-dlg-search .main .txt-content {
+  box-sizing: border-box;
+  height: 26px;
+  margin: 10px;
+  width: 253px;
+}
+
+.notepad-dlg-main .btn {
+  height:28px;
+  width:100px;
+  background-color:#e0e0e0;
+  border:1px solid #abaaab;
+}
+
+.notepad-dlg-search .main .btn-search {
+  position: absolute;
+  right: 8px;
+  top: 12px;
+}
+
+.notepad-dlg-search .main .btn-cancel {
+  bottom: 75px;
+  position: absolute;
+  right: 8px;
+}
+
+.notepad-dlg-search .main .search-direction {
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  height: 70px;
+  left: 190px;
+  padding: 10px 5px;
+  position: absolute;
+  top: 50px;
+  width: 175px;
+}
+
+.notepad-dlg-search .main input[value="down"] {
+  margin-left: 5px;
+}
+
+.notepad-dlg-search .main input[value="capital-sense"] {
+  margin-top: 35px;
+}
+.notepad-dlg-search .main input[value="circulate"] {
+  margin-top:15px;
+}

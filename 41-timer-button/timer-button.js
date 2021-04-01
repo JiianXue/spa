@@ -1,3 +1,52 @@
+function TimerBtn(){
+  let $btn = $('<input type="button" class="timer-button">'),
+      cfg = {
+        container:'body',
+        title:'同意',
+        delay:6,
+        enabled:false,
+        onClick:null
+      },
+      timer = null;
+  /* 
+  $btn.css({
+    height:'50px',
+    width:'150px',
+    'font-size':'1.2em'
+  });
+  */
+
+  //设计时，运行时
+  this.show = function(config){
+    //gen dom
+    $.extend(cfg,config);
+    $(cfg.container).append($btn);
+    $btn.val(cfg.title + '(' + cfg.delay + 's)');
+    $btn.attr('disabled','disabled');
+
+    timer = setInterval(()=>{
+      $btn.val(cfg.title+'('+ --cfg.delay + 's)');
+      if(cfg.delay === 0){
+        clearInterval(timer);
+        $btn.val(cfg.title); 
+        $btn.removeAttr('disabled');
+      }
+    },1000);
+
+    //event bind
+    
+    $btn.click(cfg.onClick);
+  }
+
+  this.destroy = function() {
+    $btn.remove();
+  }
+
+  return{
+    show,destroy
+  }
+}  
+
 let $timerBtn = (function(){
   let $btn = $('<input type="button" class="timer-button">'),
       cfg = {
@@ -34,6 +83,7 @@ let $timerBtn = (function(){
     },1000);
 
     //event bind
+    
     $btn.click(cfg.onClick);
   }
 
